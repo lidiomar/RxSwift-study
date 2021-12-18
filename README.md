@@ -41,6 +41,7 @@ What sets relays apart from their wrapped subjects is that they are guaranteed t
 - skipUntil
 - take
 - takeWhile
+- takeUntil
 
 
 
