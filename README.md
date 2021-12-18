@@ -29,4 +29,19 @@ Explicitly calling dispose() on a replay subject like this isn’t something you
 
 ## Working with relays 
 
-What sets relays apart from their wrapped subjects is that they are guaranteed to never terminate. 
+What sets relays apart from their wrapped subjects is that they are guaranteed to never terminate.
+
+# Filters
+
+- ignoreElements
+- elementAt
+- filter
+- skip
+- skipWhile
+- skipUntil
+- take
+
+
+
+
+
