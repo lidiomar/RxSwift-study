@@ -15,7 +15,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testSkipUntil()
+        testTakeWhile()
+    }
+    
+    private func testTakeWhile() {
+        Observable.of(2, 2, 4, 4, 5)
+            .enumerated()
+            .take(while: { index, element in
+                return element % 2 == 0 && index < 2
+            })
+            .map { $0.element }
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposableBag)
     }
     
     private func testTake() {
