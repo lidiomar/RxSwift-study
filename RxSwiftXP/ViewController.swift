@@ -15,7 +15,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testBehaviorRelayArray()
+        testFlatMap()
+    }
+    
+    private func testFlatMap() {
+        FlatMapTest.test()
     }
     
     private func testDistinctUntilChangeSampleTwo() {

@@ -14,6 +14,7 @@
 		702A9D1A276AE3FC00E91478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702A9D18276AE3FC00E91478 /* Main.storyboard */; };
 		702A9D1C276AE40300E91478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702A9D1B276AE40300E91478 /* Assets.xcassets */; };
 		702A9D1F276AE40300E91478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702A9D1D276AE40300E91478 /* LaunchScreen.storyboard */; };
+		7072E6FE276EA6AF007D33E0 /* FlatMapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072E6FD276EA6AF007D33E0 /* FlatMapTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		702A9D1B276AE40300E91478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		702A9D1E276AE40300E91478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		702A9D20276AE40300E91478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7072E6FD276EA6AF007D33E0 /* FlatMapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapTest.swift; sourceTree = "<group>"; };
 		F299DF8E575C9CD17697D2C9 /* Pods_RxSwiftXP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftXP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +50,6 @@
 				2E28115B70871CB33106B5DA /* Pods-RxSwiftXP.debug.xcconfig */,
 				2CE04413DF373D34957E0AD1 /* Pods-RxSwiftXP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				702A9D1B276AE40300E91478 /* Assets.xcassets */,
 				702A9D1D276AE40300E91478 /* LaunchScreen.storyboard */,
 				702A9D20276AE40300E91478 /* Info.plist */,
+				7072E6FD276EA6AF007D33E0 /* FlatMapTest.swift */,
 			);
 			path = RxSwiftXP;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				702A9D17276AE3FC00E91478 /* ViewController.swift in Sources */,
+				7072E6FE276EA6AF007D33E0 /* FlatMapTest.swift in Sources */,
 				702A9D13276AE3FC00E91478 /* AppDelegate.swift in Sources */,
 				702A9D15276AE3FC00E91478 /* SceneDelegate.swift in Sources */,
 			);
