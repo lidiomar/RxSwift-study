@@ -19,7 +19,10 @@ class ViewController: UIViewController {
     }
     
     private func testTake() {
-        
+        Observable.of("1", "2", "3", "4", "5")
+            .take(2)
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposableBag)
     }
     
     private func testSkipUntil() {
