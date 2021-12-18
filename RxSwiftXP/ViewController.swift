@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testDistinctUntilChangeSampleTwo()
+        testBehaviorRelayArray()
     }
     
     private func testDistinctUntilChangeSampleTwo() {
@@ -129,6 +129,27 @@ class ViewController: UIViewController {
         Observable.just([1, 2, 3]).subscribe { event in
             print(event)
         }.disposed(by: disposableBag)
+    }
+    
+    private func testBehaviorRelayArray() {
+        let relay = BehaviorRelay<[String]>(value: [])
+        
+        let firstSubscription = relay.subscribe(onNext: { string in
+            print("#1 subscription: \(string)")
+        })
+        
+        relay.accept(relay.value + ["First"])
+        relay.accept(relay.value + ["Second"])
+        relay.accept(relay.value + ["Third"])
+        
+        let secondSubscription = relay.subscribe(onNext: { string in
+            print("#2 subscription: \(string)")
+        })
+        
+        firstSubscription.disposed(by: disposableBag)
+        secondSubscription.disposed(by: disposableBag)
+        
+        print(relay.value)
     }
     
     private func testBehaviorRelay() {
