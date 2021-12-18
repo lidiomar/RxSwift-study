@@ -15,7 +15,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testTakeUntil()
+        testDistinctUntilChangeSampleTwo()
+    }
+    
+    private func testDistinctUntilChangeSampleTwo() {
+        Observable.of(1, 1, 2, 2, 3, 3).distinctUntilChanged({ a, b in
+            return a == b
+        }).subscribe(onNext: { print($0) })
+            .disposed(by: disposableBag)
+            
+    }
+    
+    private func testDistinctUntilChange() {
+        Observable.of(1, 1, 2, 2, 3, 3)
+            .distinctUntilChanged()
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposableBag)
     }
     
     private func testTakeUntil() {
