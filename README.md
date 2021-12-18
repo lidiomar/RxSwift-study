@@ -42,6 +42,7 @@ What sets relays apart from their wrapped subjects is that they are guaranteed t
 - take
 - takeWhile
 - takeUntil
+- distinctUntilChanged
 
 
 
