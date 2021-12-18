@@ -15,7 +15,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testTakeWhile()
+        testTakeUntil()
+    }
+    
+    private func testTakeUntil() {
+        let otherObservable = PublishSubject<Int>()
+        let subject = PublishSubject<Int>()
+        
+        subject.take(until: otherObservable)
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposableBag)
+        
+        subject.onNext(1)
+        subject.onNext(2)
+        subject.onNext(3)
+        otherObservable.onNext(99)
+        subject.onNext(4)
     }
     
     private func testTakeWhile() {
