@@ -44,6 +44,11 @@ What sets relays apart from their wrapped subjects is that they are guaranteed t
 - takeUntil
 - distinctUntilChanged
 
+## Observable traits
 
+There are three kinds of traits in RxSwift: 
+- Single 
+- Maybe
+- Completable 
 
 
