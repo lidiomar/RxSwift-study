@@ -8,14 +8,25 @@
 import UIKit
 import RxSwift
 import RxRelay
+import RxCocoa
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var testTextField: UITextField!
+    @IBOutlet weak var testLabel: UILabel!
     private let disposableBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testFlatMap()
+        testRxCocoa()
+    }
+    
+    private func testRxCocoa() {
+        let search = testTextField.rx.text.orEmpty.flatMap { text in
+                return Observable.just(text)
+        }.asDriver(onErrorJustReturn: "")
+        
+        search.drive(testLabel.rx.text).disposed(by: disposableBag)
     }
     
     private func testFlatMap() {
