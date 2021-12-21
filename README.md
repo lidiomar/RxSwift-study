@@ -51,4 +51,8 @@ There are three kinds of traits in RxSwift:
 - Maybe
 - Completable 
 
+## RxCocoa Traits 
 
+- ControlProperty and ControlEvent 
+- Driver 
+- Signal 
